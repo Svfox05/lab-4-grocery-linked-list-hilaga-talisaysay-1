@@ -4,13 +4,56 @@ class GroceryListLinked implements IGroceryList {
   int size = 0;
   
   GroceryListLinked() {}
-    
+  // item -> boolean
+  // add a given item at the top of the list
+  /* Fields:
+   * head -- GroceryNode
+   * 
+   * Methods:
+   * add()
+   * remove()
+   * markAsBought()
+   * display()
+   * 
+   * GroceryNode(Fields)
+   * data -- GroceryItem
+   * next -- GroceryNode
+   * 
+   * GroceryItem(Methods)
+   * equals(Object)
+   * toString()
+   * addQuantity(int)
+   * isBoughtTrue()
+   * 
+   */
   public boolean add(GroceryItem item) {
     GroceryNode newNode = new GroceryNode(item, head);
     head = newNode;
     return true;
   }
+  // String -> boolean
+  // returns true if the removal of the item with the given name is successful
   
+  /* Fields:
+   * head -- GroceryNode
+   * 
+   * Methods:
+   * add()
+   * remove()
+   * markAsBought()
+   * display()
+   * 
+   * GroceryNode(Fields)
+   * data -- GroceryItem
+   * next -- GroceryNode
+   * 
+   * GroceryItem(Methods)
+   * equals(Object)
+   * toString()
+   * addQuantity(int)
+   * isBoughtTrue()
+   * 
+   */
   public boolean remove(String name) {
     GroceryNode current = head;
     GroceryNode previous = current;
@@ -31,8 +74,29 @@ class GroceryListLinked implements IGroceryList {
     }
     return false;
   }
-  
-public boolean markAsBought(String name) {
+  // name -> boolean
+  // returns true if the marking of the item with the given name is successful
+  /* Fields:
+   * head -- GroceryNode
+   * 
+   * Methods:
+   * add()
+   * remove()
+   * markAsBought()
+   * display()
+   * 
+   * GroceryNode(Fields)
+   * data -- GroceryItem
+   * next -- GroceryNode
+   * 
+   * GroceryItem(Methods)
+   * equals(Object)
+   * toString()
+   * addQuantity(int)
+   * isBoughtTrue()
+   * 
+   */
+  public boolean markAsBought(String name) {
     GroceryNode current = head;
     
     while (current != null) {
@@ -44,7 +108,28 @@ public boolean markAsBought(String name) {
     }
     return false;
   }
-  
+  //  -> void
+  // returns nothing but prints all the elements in the Linked List
+  /* Fields:
+   * head -- GroceryNode
+   * 
+   * Methods:
+   * add()
+   * remove()
+   * markAsBought()
+   * display()
+   * 
+   * GroceryNode(Fields)
+   * data -- GroceryItem
+   * next -- GroceryNode
+   * 
+   * GroceryItem(Methods)
+   * equals(Object)
+   * toString()
+   * addQuantity(int)
+   * isBoughtTrue()
+   * 
+   */
   public void display() {
     GroceryNode current = head;
 
